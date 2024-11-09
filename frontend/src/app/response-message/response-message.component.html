@@ -1,0 +1,18 @@
+<div
+    *ngIf="isResponseMesage ; else myMessage"
+    class="response-message d-flex justify-content-srtart flex-row-reverse"
+>
+
+
+    <img
+        class="response-icon"
+        [ngClass]="{'load' : isLoading}"
+        src='../assets/images/mypoetteacher.jpg'
+    >
+    <div class="response-text">{{message}}</div>
+</div>
+
+
+<ng-template #myMessage>
+    <div class="badge my-message">{{message}}</div>
+</ng-template>

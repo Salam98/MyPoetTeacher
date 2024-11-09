@@ -1,0 +1,413 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f7f3e9 !important;
+    height: 100%;
+
+}
+
+html {
+    height: 100%;
+}
+
+
+
+@keyframes loading-icon {
+    0% {
+        opacity: 0;
+
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+
+
+    }
+}
+
+.response-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    align-self: normal;
+    margin-left: 5px;
+}
+
+
+.response-icon.load {
+    /* animation */
+    animation: loading-icon 1.5s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+.response-message {
+    margin-block: 1em;
+
+}
+
+
+
+
+@keyframes round {
+    from {
+        border-radius: 300px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    to {
+        border-radius: 300px;
+        border-radius: 300px;
+        width: 15%;
+    }
+
+
+}
+
+app-root {
+    height: 100%;
+    display: block;
+}
+
+.main {
+    position: relative;
+    min-height: 100vh;
+
+}
+
+.test {
+    height: 100%;
+
+    position: absolute;
+    background-image: url(assets/images/pexels-pixabay-235985.jpg);
+    height: 100%;
+    width: 100%;
+    z-index: -3;
+    opacity: 0.8;
+}
+
+.test::after {
+    content: " ";
+    position: absolute;
+    background: rgb(207, 207, 207);
+    height: 100%;
+    width: 100%;
+    display: block;
+    z-index: -4;
+    opacity: 0.35;
+}
+
+.my-message {
+    background-color: rgb(89 69 52 / 35%) !important;
+    border-radius: 1rem !important;
+    padding: .8rem !important;
+    color: #1a1818 !important;
+    font-size: 16px !important;
+    --bs-badge-font-weight: 400 !important;
+    line-height: 1.5em !important;
+    text-align: right !important;
+    display: block !important;
+    width: fit-content !important;
+    margin-block: 0.5em;
+    white-space: pre-wrap!important;
+    overflow-wrap: break-word;
+    max-width: 100% !important;
+}
+
+.text-bg-main{
+    background-color: rgb(89 69 52 / 35%) !important;
+    border-radius: 1rem !important;
+    /* padding: .8rem !important; */
+    color: #1a1818 !important;
+    font-size: 16px !important;
+    --bs-badge-font-weight: 400 !important;
+    line-height: 1.5em !important;
+    border: 0px;
+}
+.response-text {
+
+    color: #1a1818 !important;
+    font-size: 16px !important;
+    line-height: 1.5em !important;
+    text-align: right !important;
+    display: block !important;
+    direction: rtl;
+    margin-top: 0.2em;
+    white-space: pre-wrap;
+}
+
+.poem-display {
+    overflow-y: auto;
+    flex: 1 1 10rem;
+}
+
+.poem-display .start-view {
+    font-size: x-large;
+    font-weight: 900;
+    text-align: center;
+    padding-block: 1rem;
+    height: 100%;
+    display: block;
+ 
+}
+.poem-display .start-recommendation{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.page-title {
+    padding-block: 2vw;
+    padding-inline: 25%;
+
+}
+
+.page-title svg {
+    width: 100%;
+    max-height: 120px;
+
+
+}
+
+.image-section img {
+    border-radius: .5em;
+
+
+}
+
+.image-section img.round {
+    animation: round 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: linear
+}
+
+.image-section img.circle {
+    border-radius: 300px;
+    border-radius: 300px;
+    width: 15%;
+
+
+}
+
+.container-layout {
+    height: calc(100vh - 1rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.prompt-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    
+}
+
+.content {
+    height: fit-content;
+}
+
+.poem-footer {
+    height: fit-content;
+
+}
+
+.poem-input {
+    border-radius: 1rem;
+    padding: .5rem;
+    background-color: #160f0524 !important;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+
+.poem-input textarea {
+    background-color: #f7f3e900 !important;
+    border: none !important;
+    resize: none;
+    max-height: 10dvh;
+    height: 28px;
+    display: flex;
+    flex: auto;
+    margin-inline-start: 4px;
+}
+
+/* width */
+.poem-input textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+.poem-input textarea::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.poem-input textarea::-webkit-scrollbar-thumb {
+    background: #846e57;
+    border-radius: 10px;
+    cursor: auto;
+}
+
+/* Handle on hover */
+.poem-input textarea::-webkit-scrollbar-thumb:hover {
+    background: #77644f;
+}
+
+/* width */
+.poem-display::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+.poem-display::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.poem-display::-webkit-scrollbar-thumb {
+    background: #846e57;
+    border-radius: 10px;
+    cursor: auto;
+}
+
+/* Handle on hover */
+.poem-display::-webkit-scrollbar-thumb:hover {
+    background: #77644f;
+}
+
+.poem-input button {
+    background-color: #f7f3e900 !important;
+    height: 1.9rem;
+    width: 1.9rem;
+    border: none;
+    padding: 0px;
+    align-self: end;
+}
+
+.poem-input button:active {
+    background-color: #f7f3e900 !important;
+    border: none;
+}
+
+.poem-input textarea:focus-visible {
+    border: none !important;
+    outline: none !important;
+}
+
+.poetry-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+
+}
+
+.image-section img {
+    width:35%;
+    border-radius: 300px;
+    box-shadow: 0px 0px 19px 4px #878787;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.poetry-card {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 992) {
+    @keyframes round {
+        from {
+            border-radius: 300px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        to {
+            border-radius: 300px;
+            border-radius: 300px;
+            width: 30%;
+        }
+
+    }
+
+    .content {
+        height: 100vh;
+    }
+
+    .image-section img.circle {
+        border-radius: 300px;
+        border-radius: 300px;
+        width: 30%;
+
+    }
+
+    .image-section img {
+        width: 70%;
+        border-radius: 300px;
+        box-shadow: 0px 0px 19px 4px #878787;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    @keyframes round {
+        from {
+            border-radius: 300px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            margin-top: 10%;
+            ;
+
+        }
+
+        to {
+            border-radius: 300px;
+            border-radius: 300px;
+            width: 45%;
+            margin-top: 0px;
+        }
+
+    }
+
+    .content {
+        height: 100vh;
+    }
+
+    .image-section img.circle {
+        border-radius: 300px;
+        border-radius: 300px;
+        width: 45%;
+        margin-top: 5px;
+
+
+    }
+
+    .image-section img {
+        width: 70%;
+        margin-top: 10%;
+        border-radius: 300px;
+        box-shadow: 0px 0px 19px 4px #878787;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .start-view p span{
+        display: block;
+    }
+
+}
