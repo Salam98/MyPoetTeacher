@@ -113,6 +113,9 @@ export class AppComponent {
         }
 
       }, 25);
+    },(error:any)=>{
+      newChatMessage.isLoading = false;
+      newChatMessage.message="حدثت مشكلة في الإتصال"
     });
 
   }
